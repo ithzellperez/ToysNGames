@@ -1,0 +1,15 @@
+@import "../../../app.component";
+
+.modal-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: $width;
+}
+  
+.textarea-full-width {
+    width: $width;
+}
+
+.mat-form-field {
+  width: $width;
+}

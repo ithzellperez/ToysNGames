@@ -1,0 +1,63 @@
+<h1 mat-dialog-title>{{data.title}}</h1>
+<form [formGroup]="form">
+  <div mat-dialog-content class="modal-form">
+    <div>
+      <mat-form-field>
+        <mat-label>Name </mat-label>
+        <input matInput formControlName="nameInput" maxlength="50" required>
+        <mat-error>
+          Please provide a valid name
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <mat-label>Price </mat-label>
+        <span matPrefix>$ &nbsp;</span>
+        <input type="text" formControlName="priceInput" matInput (keypress) = "decimalOnly($event)" required/>
+        <mat-error>
+          Please provide a valid price (range: $1 - $1000)
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <mat-label>Company </mat-label>
+        <input matInput  formControlName="companyInput" maxlength="50" required/>
+        <mat-error>
+          Please provide a valid company name
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div>
+    <mat-form-field>
+      <mat-label>Maximum Age </mat-label>
+      <input type="text" formControlName="ageRestrictionInput" matInput (keypress)="numberOnly($event)" />
+      <mat-error>
+        Please provide a valid age (range 0 - 100)
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+    <div>
+      <mat-form-field>
+        <mat-label>Description </mat-label>
+        <textarea matInput formControlName="descriptionInput" maxlength="100"></textarea>
+      </mat-form-field>
+    </div>
+
+  <div mat-dialog-actions>
+    <button mat-raised-button (click)="onNoClick()">
+      <mat-icon class="icon">close</mat-icon>
+      <span class="label"> Close</span>
+    </button>
+    <button mat-raised-button color="primary" (click)="onSubmit()" *ngIf="submitInvalid">
+      <mat-icon class="icon">save</mat-icon>
+      <span class="label"> Save</span>
+    </button>
+  </div>
+</form>

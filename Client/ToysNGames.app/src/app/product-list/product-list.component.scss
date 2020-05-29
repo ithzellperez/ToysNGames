@@ -1,0 +1,102 @@
+@import "../app.component";
+
+.product-loading-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 56px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-rate-limit-reached {
+  color: #980000;
+  max-width: 360px;
+  text-align: center;
+}
+
+/* Column Widths */
+.mat-column-number,
+.mat-column-state {
+  max-width: 64px;
+}
+
+.mat-column-created {
+  max-width: 124px;
+}
+
+.card {
+  min-width: 30%;
+  width: 80%;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.add-button{
+  margin-bottom: 2%;
+  width: auto;
+  float: right;
+  position: sticky;
+}
+
+.mat-form-field {
+  margin-right: 8px;
+}
+
+.title-center{
+  margin: auto;
+}
+
+.mat-card-title {
+  margin-bottom: 20px;
+}
+
+th.mat-header-cell {
+  text-align: center;
+}
+
+td.mat-cell{
+  text-align: center;
+}
+
+.product-center-card{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.product-container {
+    position: relative;
+    // min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 100%;
+  }
+  
+  .product-table-container {
+    /* position: relative; */
+    max-height: 400px;
+    overflow: auto;
+  }
+  
+  table {
+    width: $width;
+  }
