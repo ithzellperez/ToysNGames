@@ -13,7 +13,7 @@ export class ProductService {
 
   public products: Product[];
 
-  private PRODUCT_API_SERVICE = 'http://localhost:50114/api';
+  private PRODUCT_API_SERVICE = 'http://localhost:60000/api';
   
   headers = new HttpHeaders({
     'Content-Type':  'application/json',

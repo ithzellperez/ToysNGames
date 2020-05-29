@@ -19,8 +19,8 @@ Contains 1 project:
 
 ## Run instructions
 
-1. Localhost port is set as 50114 on both ToysNGames.api and ToysNGames.app projects. If you want to change it, please update both projects.
-In ToysNGames.api, go to Properties -> Debugging -> Application URL. Modify URL with the new port.
-In ToysNGames.app, go to folder src -> app -> shared -> product-service.ts. Change PRODUCT_API_SERVICE const with the new port.
+1. Web API port is 60000 on both ToysNGames.api and ToysNGames.app projects. If you want to change it, please update both projects.<br />
+In ToysNGames.api, go to Properties folder -> launchSettings.json and modify applicationUrl with the new port.<br />
+In ToysNGames.app, go to src folder -> app -> shared -> product-service.ts. Change PRODUCT_API_SERVICE const with the new port.<br />
 2. Run ToysNGames.api
 3. Run ToysNGames.app
